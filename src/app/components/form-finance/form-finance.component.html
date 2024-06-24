@@ -1,0 +1,37 @@
+<div class="container">
+<h2>{{element?.id  ?  "Edytuj wpis" : "Dodaj wpis"}}</h2>
+    <form class="form" [formGroup]="myForm">
+        <mat-form-field class="full-width">
+            <mat-label>Name</mat-label>
+            <input matInput [formControl]="myForm.controls. name" required maxlength="20">
+            @if (myForm.controls.name.invalid) {
+            <mat-error>Insert name</mat-error>
+            }
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-label>Value</mat-label>
+            <input matInput [formControl]="myForm.controls.value" required min="1" max="1000">
+            @if (myForm.controls.value.invalid) {
+            <mat-error>Insert value</mat-error>
+            }
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-label>Category</mat-label>
+            <input matInput [formControl]="myForm.controls.category" required min="1" max="1000">
+            @if (myForm.controls.category.invalid) {
+            <mat-error>Insert category</mat-error>
+            }
+        </mat-form-field>
+
+        <div class="buttons">
+            <button mat-raised-button color="primary" (click)="close()">Close</button>
+            <button mat-raised-button color="accent" [disabled]="!myForm.valid" (click)="save()">Save</button>
+        </div>
+    </form>
+
+    <!-- <mat-dialog-actions>
+        <button mat-button mat-dialog-close>No</button>
+        <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
+      </mat-dialog-actions> -->

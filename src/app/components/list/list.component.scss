@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-mdc-header-cell {
+    background-color: #7b1fa2 !important;
+    border-bottom: 2px solid #69f0ae;
+    color: white;
+    font-weight: bold;
+    text-align: center
+}
+
+::ng-deep {
+    .mat-sort-header-container {
+        justify-content: center;
+    }
+
+    .mat-sort-header-arrow {
+        color: #f2d3ff !important;
+    }
+}
+
+.mat-mdc-cell {
+    text-align: center;
+    background-color: #bb7ed557;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+h2 {
+    margin: 5px 0px;
+}
+
+.addButton {
+    margin: 5px 0px;
+    background-color: #7b1fa2 !important;
+    color: white !important;
+}
+
